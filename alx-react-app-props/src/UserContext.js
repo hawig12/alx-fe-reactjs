@@ -1,13 +1,16 @@
-// src/UserContext.js
-import React from 'react';
+import React, { useState } from 'react';
 
-// Initialize a Context.
-// The argument passed to createContext (here, null) is the default value
-// that consumers will receive if they don't have a matching Provider above them
-// in the component tree.
-const UserContext = React.createContext(null);
+function Counter() {
+  const [count, setCount] = useState(0);
 
-// Export the created context.
-// This allows other components (like App.jsx and UserDetails.jsx)
-// to import and use this specific context.
-export default UserContext;
+  return (
+    <div style={{ textAlign: 'center', marginTop: '20px' }}>
+      <p>Current Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button onClick={() => setCount(0)}>Reset</button>
+    </div>
+  );
+}
+
+export default Counter;
