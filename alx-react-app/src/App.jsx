@@ -1,3 +1,10 @@
+// src/App.jsx
+import UserProfile from './components/UserProfile'; // Add this line
+import Header from './components/Header'; // From Task 2
+import MainContent from './components/MainContent'; // From Task 2
+import Footer from './components/Footer'; // From Task 2
+import WelcomeMessage from './components/Welcome'; // From Task 1 (or Welcome.js depending on your fix)
+// ... other existing imports (useState, reactLogo, viteLogo, App.css)
 function App() {
   // ... existing state and other logic
 
