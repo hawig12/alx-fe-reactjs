@@ -1,4 +1,37 @@
 // src/App.jsx
+// src/App.jsx
+
+// Import the ProfilePage component
+import ProfilePage from './ProfilePage';
+
+// Import the UserContext (note the lowercase 'u' for the file name)
+import UserContext from './userContext'; // Changed from './UserContext' to './userContext'
+
+/**
+ * Main application component.
+ * This component initializes user data and provides it through the UserContext.
+ * It then renders the ProfilePage component, which will consume the context data.
+ */
+function App() {
+  // Define the user data that will be passed down through the context
+  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
+
+  return (
+    // UserContext.Provider makes the 'userData' available to all child components
+    // that consume this context, without needing to pass it as props.
+    // The 'value' prop is crucial for passing the data.
+    <UserContext.Provider value={userData}>
+      {/* Render the ProfilePage component.
+        The 'userData' prop is intentionally removed here,
+        as ProfilePage (and its children) will now get data from Context.
+      */}
+      <ProfilePage />
+    </UserContext.Provider>
+  );
+}
+
+// Export the App component as the default export
+export default App;
 
 // Core React imports
 import { useState } from 'react';
