@@ -1,3 +1,9 @@
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+import Footer from './components/Footer';
+// Keep your existing import for WelcomeMessage or Welcome.js here as well if needed for task 1
+import WelcomeMessage from './components/Welcome'; // Assuming you fixed task 1 and renamed it to Welcome.js
+// ... other existing imports (useState, reactLogo, viteLogo, App.css)
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
