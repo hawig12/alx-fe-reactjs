@@ -1,14 +1,6 @@
 // src/ProfilePage.jsx
 import UserInfo from './UserInfo';
 
-function ProfilePage({ userData }) {
-  return <UserInfo userData={userData} />;
-}
-
-export default ProfilePage;
-// src/ProfilePage.jsx
-import UserInfo from './UserInfo';
-
 /**
  * ProfilePage component.
  * This component acts as an intermediary, rendering the UserInfo component.
@@ -20,3 +12,4 @@ function ProfilePage() { // Removed { userData } from props
 }
 
 export default ProfilePage;
+
