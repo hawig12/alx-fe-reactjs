@@ -1,3 +1,28 @@
+function App() {
+  // ... existing state and other logic
+
+  return (
+    <>
+      {/* Components from previous tasks (if completed) */}
+      {/* For example: */}
+      {/* <Header /> */}
+      {/* <MainContent /> */}
+      {/* <Footer /> */}
+      {/* <WelcomeMessage /> */}
+      {/* <UserProfile name="Alice" age={25} bio="Loves hiking and photography" /> */}
+
+      {/* Add the Counter component here */}
+      <Counter />
+
+      {/* Rest of the existing App.jsx content (Vite/React logos, count button, etc.) */}
+      {/* ... */}
+    </>
+  );
+}
+// src/App.jsx
+import Counter from './components/Counter'; // Add this line
+// Keep other imports (Header, MainContent, Footer, UserProfile, Welcome, useState, etc.)
+// ...
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
