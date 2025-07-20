@@ -1,23 +1,6 @@
-
-// src/UserDetails.jsx
-import React, { useContext } from 'react'; // Import useContext
-import UserContext from './UserContext'; // Import UserContext
-
-function UserDetails() { // No userData prop here anymore
-  const userData = useContext(UserContext); // Consume context
-
-  return (
-    <div>
-      <p>Name: {userData.name}</p>
-      <p>Email: {userData.email}</p>
-    </div>
-  );
-}
-
-export default UserDetails;
 // src/UserDetails.jsx
 import React, { useContext } from 'react'; // Import useContext hook
-import UserContext from './userContext'; // Import the UserContext (lowercase 'u')
+import UserContext from './UserContext'; // Import the UserContext (NOTE: uppercase 'U')
 
 /**
  * UserDetails component.
