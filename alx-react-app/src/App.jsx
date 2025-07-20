@@ -10,22 +10,23 @@ function App() {
 
   return (
     <>
+      {/* Components from previous tasks (if completed) */}
       <Header />
       <MainContent />
       <Footer />
+      <WelcomeMessage />
 
-      {/* Your content from Task 1 and the default Vite + React content should still be here */}
-      <WelcomeMessage /> {/* From Task 1 */}
+      {/* Add the UserProfile component here with example props */}
+      <UserProfile name="Alice" age={25} bio="Loves hiking and photography" />
+      <UserProfile name="Bob" age={30} bio="Software engineer and gamer" /> {/* You can add more for testing */}
+
 
       {/* Rest of the existing App.jsx content (Vite/React logos, count button, etc.) */}
-      <div>
-        {/* ... */}
-      </div>
-      <h1>Vite + React</h1>
       {/* ... */}
     </>
   );
 }
+
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
