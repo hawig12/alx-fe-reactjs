@@ -1,4 +1,14 @@
 // src/App.jsx
+import ProfilePage from './ProfilePage';
+
+function App() {
+  const userData = { name: "Hawi", email: "nabiee1264@gmail.com" };
+
+  return <ProfilePage userData={userData} />;
+}
+
+export default App;
+// src/App.jsx
 // src/App.jsx
 
 // Import the ProfilePage component
