@@ -11,7 +11,6 @@ function App() {
     </UserContext.Provider>
   );
 }
-
 export default App;
 
 // src/App.jsx
