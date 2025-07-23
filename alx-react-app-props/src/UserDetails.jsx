@@ -1,10 +1,9 @@
-
 // src/UserDetails.jsx
-import React, { useContext } from 'react'; // Import useContext
-import UserContext from './UserContext'; // Import UserContext
+import { useContext } from 'react';
+import UserContext from './UserContext';
 
-function UserDetails() { // No userData prop here anymore
-  const userData = useContext(UserContext); // Consume context
+function UserDetails() {
+  const userData = useContext(UserContext);
 
   return (
     <div>
