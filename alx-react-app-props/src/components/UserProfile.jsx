@@ -1,3 +1,4 @@
+// src/components/UserProfile.jsx
 import React from 'react';
 import UserInfo from './UserInfo';
 
