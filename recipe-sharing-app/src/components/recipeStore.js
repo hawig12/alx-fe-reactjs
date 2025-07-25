@@ -15,3 +15,30 @@ const useRecipeStore = create((set) => ({
 }));
 
 export default useRecipeStore;
+import { create } from 'zustand';
+
+const useRecipeStore = create((set) => ({
+  recipes: [],
+
+  addRecipe: (recipe) =>
+    set((state) => ({
+      recipes: [...state.recipes, { id: Date.now(), ...recipe }],
+    })),
+
+  deleteRecipe: (id) =>
+    set((state) => ({
+      recipes: state.recipes.filter((r) => r.id !== id),
+    })),
+
+  updateRecipe: (id, updatedRecipe) =>
+    set((state) => ({
+      recipes: state.recipes.map((r) =>
+        r.id === id ? { ...r, ...updatedRecipe } : r
+      ),
+    })),
+
+  setRecipes: (recipes) => set({ recipes }),
+}));
+
+export default useRecipeStore;
+
