@@ -1,12 +1,24 @@
-import SearchBar from './components/SearchBar';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RecipeList from './components/RecipeList';
+import AddRecipeForm from './components/AddRecipeForm';
+import EditRecipeForm from './components/EditRecipeForm';
+import RecipeDetails from './components/RecipeDetails';
+import SearchBar from './components/SearchBar';
 
 function App() {
   return (
-    <div className="p-6">
-      <SearchBar />
-      <RecipeList />
-    </div>
+    <Router>
+      <div className="max-w-2xl mx-auto p-4">
+        <SearchBar />
+        <Routes>
+          <Route path="/" element={<RecipeList />} />
+          <Route path="/add" element={<AddRecipeForm />} />
+          <Route path="/edit/:recipeId" element={<EditRecipeForm />} />
+          <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
