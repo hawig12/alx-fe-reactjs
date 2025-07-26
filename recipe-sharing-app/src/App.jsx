@@ -1,3 +1,17 @@
+import SearchBar from './components/SearchBar';
+import RecipeList from './components/RecipeList';
+
+function App() {
+  return (
+    <div className="p-6">
+      <SearchBar />
+      <RecipeList />
+    </div>
+  );
+}
+
+export default App;
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
