@@ -1,3 +1,4 @@
+`/search/users?q=${searchQuery}&per_page=10&page=${page}`
 // src/services/githubService.js
 import axios from 'axios';
 
