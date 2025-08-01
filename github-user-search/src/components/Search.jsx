@@ -13,7 +13,7 @@ function Search() {
 
     if (!query.trim()) {
       setError("Please enter a username to search.");
-      setUsers([]); // Clear results
+      setUsers([]);
       return;
     }
 
@@ -22,12 +22,12 @@ function Search() {
     setUsers([]);
 
     try {
-      // Call the API service to fetch data
       const results = await fetchUserData(query);
       setUsers(results);
     } catch (err) {
       console.error("Failed to fetch users:", err);
-      setError("Looks like we can't find the user. Please try again.");
+      // This is the updated error message as per your request
+      setError("Looks like we cant find the user"); 
     } finally {
       setLoading(false);
     }
@@ -67,7 +67,6 @@ function Search() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {users.map((user) => (
             <div key={user.id} className="bg-gray-50 p-6 rounded-lg shadow-sm flex items-center space-x-4 border border-gray-200">
-              {/* This is where the avatar and login are displayed */}
               <img
                 src={user.avatar_url}
                 alt={`${user.login}'s avatar`}
