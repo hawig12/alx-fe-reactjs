@@ -14,14 +14,36 @@ const githubApi = axios.create({
 });
 
 /**
- * Searches for GitHub users based on a query, as a replacement for the fetchUserData function.
- * @param {string} query - The search term for users.
- * @returns {Promise<Array>} A promise that resolves to an array of user objects.
+ * Constructs the query string for the GitHub Search API based on advanced criteria.
+ * @param {string} username - The search term for users.
+ * @param {string} location - The location to filter by.
+ * @param {number} minRepos - The minimum number of public repositories.
+ * @returns {string} The formatted query string.
  */
-export const fetchUserData = async (query) => {
+const buildSearchQuery = (username, location, minRepos) => {
+  let query = username.trim();
+  if (location.trim()) {
+    query += `+location:${location.trim()}`;
+  }
+  if (minRepos > 0) {
+    query += `+repos:>=${minRepos}`;
+  }
+  return query;
+};
+
+/**
+ * Searches for GitHub users with advanced criteria.
+ * @param {{ username: string, location: string, minRepos: number, page: number }} params
+ * @returns {Promise<Object>} A promise that resolves to the API response object.
+ */
+export const fetchUserData = async ({ username, location, minRepos, page = 1 }) => {
   try {
-    const response = await githubApi.get(`/search/users?q=${query}`);
-    return response.data.items;
+    const searchQuery = buildSearchQuery(username, location, minRepos);
+    if (!searchQuery) {
+        return { items: [], total_count: 0 };
+    }
+    const response = await githubApi.get(`/search/users?q=${searchQuery}&per_page=10&page=${page}`);
+    return response.data; // This now includes 'items', 'total_count', etc.
   } catch (error) {
     console.error('Error fetching user data:', error);
     throw error;
@@ -29,7 +51,7 @@ export const fetchUserData = async (query) => {
 };
 
 /**
- * Fetches details for a specific GitHub user.
+ * Fetches detailed information for a specific GitHub user.
  * @param {string} username - The username of the GitHub user.
  * @returns {Promise<Object>} A promise that resolves to the user's detail object.
  */
