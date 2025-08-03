@@ -4,7 +4,7 @@ import axios from 'axios';
 // Get the GitHub API key from environment variables
 const GITHUB_API_KEY = import.meta.env.VITE_APP_GITHUB_API_KEY;
 
-// Create an Axios instance with a base URL and authorization header
+// Create an Axios instance with a base URL and authorization header for the getUserDetails function
 const githubApi = axios.create({
   baseURL: 'https://api.github.com',
   headers: {
@@ -53,8 +53,16 @@ export const fetchUserData = async ({ username, location, minRepos, page = 1 }) 
         return { items: [], total_count: 0 };
     }
 
-    // Make the GET request to the GitHub Search API endpoint
-    const response = await githubApi.get(`/search/users?q=${searchQuery}&per_page=10&page=${page}`);
+    // This is the direct call with the full, literal URL string as requested
+    const response = await axios.get(
+      `https://api.github.com/search/users?q=${searchQuery}&per_page=10&page=${page}`,
+      {
+        headers: {
+          'Authorization': GITHUB_API_KEY ? `token ${GITHUB_API_KEY}` : '',
+          'Accept': 'application/vnd.github.v3+json',
+        },
+      }
+    );
     
     // The response data contains items (users), total_count, and other metadata
     return response.data;
@@ -66,8 +74,7 @@ export const fetchUserData = async ({ username, location, minRepos, page = 1 }) 
 
 /**
  * Fetches detailed information for a specific GitHub user.
- * This is needed to get information like location and public repo count,
- * which are not always available in the initial search results.
+ * This function still uses the configured axios instance for cleaner code.
  * @param {string} username - The username of the GitHub user.
  * @returns {Promise<Object>} A promise that resolves to the user's detail object.
  */
@@ -84,4 +91,3 @@ export const getUserDetails = async (username) => {
     throw error;
   }
 };
-
