@@ -24,12 +24,12 @@ function UserProfile() {
       {/* Responsive Image Styling */}
       {/* mx-auto: centers the image horizontally */}
       {/* rounded-full: makes the image circular */}
-      {/* w-24 h-24: default size for small screens */}
+      {/* sm:w-24 sm:h-24: size for small screens and above */}
       {/* md:w-36 md:h-36: overrides to a larger size on medium screens and above */}
       <img 
         src="https://via.placeholder.com/150" 
         alt="User Profile" 
-        className="mx-auto rounded-full w-24 h-24 md:w-36 md:h-36" 
+        className="mx-auto rounded-full sm:w-24 sm:h-24 md:w-36 md:h-36" 
       />
       
       {/* Responsive Heading Styling */}
@@ -49,6 +49,7 @@ function UserProfile() {
 }
 
 export default UserProfile;
+
 
 import React from 'react';
 
