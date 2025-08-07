@@ -3,15 +3,14 @@ import React from 'react';
 /**
  * A responsive profile card component styled with Tailwind CSS.
  * It displays a user's image, name, and a short bio, with styles
- * that adapt to different device sizes.
+ * that adapt to different device sizes. The styles now explicitly
+ * include sm: prefixes for clarity, as requested.
  */
 function UserProfile() {
   return (
     // Responsive Container Styling
-    // The classes are mobile-first, with 'sm' and 'md' prefixes
-    // overriding styles for larger screens.
     // bg-gray-100: a light gray background
-    // p-4: default padding for small screens
+    // sm:p-4: padding for small screens and above
     // md:p-8: overrides to a larger padding on medium screens and above
     // max-w-xs: default max-width for small screens
     // md:max-w-sm: overrides to a larger max-width on medium screens and above
@@ -20,7 +19,7 @@ function UserProfile() {
     // rounded-lg: applies medium-sized rounded corners
     // shadow-lg: adds a large drop shadow
     // text-center: centers text content
-    <div className="bg-gray-100 p-4 md:p-8 max-w-xs md:max-w-sm mx-auto my-20 rounded-lg shadow-lg text-center">
+    <div className="bg-gray-100 sm:p-4 md:p-8 max-w-xs md:max-w-sm mx-auto my-20 rounded-lg shadow-lg text-center">
       
       {/* Responsive Image Styling */}
       {/* mx-auto: centers the image horizontally */}
