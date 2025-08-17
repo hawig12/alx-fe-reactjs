@@ -3,24 +3,83 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper. It’s simple yet incredibly flavorful, a true comfort food.",
-    "image": "https://images.unsplash.com/photo-1594212699903-ef887349661d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1594212699903-ef887349661d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta or guanciale",
+      "2 large eggs",
+      "50g Pecorino Romano cheese",
+      "Black pepper to taste"
+    ],
+    "instructions": [
+      "Cook the spaghetti according to package directions.",
+      "While the pasta cooks, crisp the pancetta in a pan.",
+      "In a separate bowl, whisk the eggs and cheese together with a generous amount of black pepper.",
+      "Drain the pasta and immediately add it to the pan with the pancetta.",
+      "Remove the pan from the heat and quickly stir in the egg mixture.",
+      "Serve immediately with more cheese and pepper."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy. This popular Indian dish is a delight.",
-    "image": "https://images.unsplash.com/photo-1588166524941-47124119642a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1588166524941-47124119642a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "500g chicken breast",
+      "1 cup yogurt",
+      "1 tbsp ginger-garlic paste",
+      "1 tsp garam masala",
+      "1 cup tomato puree",
+      "1 cup heavy cream"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt, ginger-garlic paste, and spices for at least 1 hour.",
+      "Grill the chicken until cooked through and slightly charred.",
+      "In a separate pan, cook the tomato puree and add spices, then stir in the cream.",
+      "Add the cooked chicken to the sauce and simmer for 15-20 minutes.",
+      "Serve hot with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Vegetable Stir Fry",
     "summary": "A quick and healthy stir-fry with a colorful mix of fresh vegetables. Perfect for a light dinner or a satisfying lunch.",
-    "image": "https://images.unsplash.com/photo-1546069901-d41f021e1492?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1546069901-d41f021e1492?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "2 cups mixed vegetables (broccoli, bell peppers, carrots)",
+      "1 tbsp soy sauce",
+      "1 tsp sesame oil",
+      "1 clove garlic, minced",
+      "1 tbsp olive oil"
+    ],
+    "instructions": [
+      "Heat olive oil in a wok or large skillet over high heat.",
+      "Add garlic and stir-fry for 30 seconds until fragrant.",
+      "Add vegetables and stir-fry for 5-7 minutes until crisp-tender.",
+      "Add soy sauce and sesame oil, and toss to coat.",
+      "Serve hot."
+    ]
   },
   {
     "id": 4,
     "title": "Classic Beef Burger",
     "summary": "A juicy beef patty topped with lettuce, tomato, cheese, and a special sauce. A timeless favorite for any occasion.",
-    "image": "https://images.unsplash.com/photo-1610440026336-d6682736209b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1610440026336-d6682736209b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "1 beef patty",
+      "1 burger bun",
+      "Lettuce leaf",
+      "Tomato slice",
+      "Onion slice",
+      "Cheese slice"
+    ],
+    "instructions": [
+      "Season the beef patty with salt and pepper.",
+      "Grill or pan-fry the patty to your desired doneness.",
+      "Toast the burger bun.",
+      "Assemble the burger with the patty, cheese, lettuce, tomato, and onion.",
+      "Add your favorite condiments and serve immediately."
+    ]
   }
 ]
