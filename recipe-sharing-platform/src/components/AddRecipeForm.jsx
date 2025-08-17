@@ -5,13 +5,14 @@ const AddRecipeForm = () => {
   const [formData, setFormData] = useState({
     title: '',
     ingredients: '',
-    instructions: '',
+    steps: '',
   });
   const [errors, setErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState(null);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name } = e.target;
+    const value = e.target.value; // Explicitly using target.value here
     setFormData({ ...formData, [name]: value });
   };
 
@@ -23,8 +24,8 @@ const AddRecipeForm = () => {
     if (!formData.ingredients.trim()) {
       newErrors.ingredients = 'Ingredients are required.';
     }
-    if (!formData.instructions.trim()) {
-      newErrors.instructions = 'Instructions are required.';
+    if (!formData.steps.trim()) {
+      newErrors.steps = 'Preparation steps are required.';
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -33,14 +34,12 @@ const AddRecipeForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // For this task, we will just log the data.
-      // In a real application, you would send this to a backend.
       console.log('Form Submitted:', formData);
       setSubmissionStatus('success');
       setFormData({
         title: '',
         ingredients: '',
-        instructions: '',
+        steps: '',
       });
     } else {
       setSubmissionStatus('error');
@@ -89,20 +88,20 @@ const AddRecipeForm = () => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="instructions" className="block text-sm font-medium text-gray-700 mb-1">
-              Instructions (each step on a new line)
+            <label htmlFor="steps" className="block text-sm font-medium text-gray-700 mb-1">
+              Preparation Steps (each step on a new line)
             </label>
             <textarea
-              id="instructions"
-              name="instructions"
+              id="steps"
+              name="steps" // Renamed from 'instructions' to 'steps'
               rows="8"
-              value={formData.instructions}
+              value={formData.steps}
               onChange={handleChange}
               className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm ${
-                errors.instructions ? 'border-red-500' : ''
+                errors.steps ? 'border-red-500' : ''
               }`}
             ></textarea>
-            {errors.instructions && <p className="mt-1 text-sm text-red-500">{errors.instructions}</p>}
+            {errors.steps && <p className="mt-1 text-sm text-red-500">{errors.steps}</p>}
           </div>
 
           <div className="flex justify-between items-center">
